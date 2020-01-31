@@ -7,3 +7,5 @@ export const LOGIN_FAIL = 'LOGIN_FAIL';
 export const USER_LOADED = 'USER_LOADED';
 export const USER_ERROR = 'USER_ERROR';
 export const LOGOUT = 'LOGOUT';
+export const GET_MOVIES = 'GET_MOVIES';
+export const GET_MOVIES_ERROR = 'GET_MOVIES_ERROR';

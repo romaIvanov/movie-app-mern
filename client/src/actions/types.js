@@ -9,3 +9,5 @@ export const USER_ERROR = 'USER_ERROR';
 export const LOGOUT = 'LOGOUT';
 export const GET_MOVIES = 'GET_MOVIES';
 export const GET_MOVIES_ERROR = 'GET_MOVIES_ERROR';
+export const GET_MOVIES_PAGE = 'GET_MOVIES_PAGE';
+export const GET_MOVIES_PAGE_ERROR = 'GET_MOVIES_PAGE_ERROR';

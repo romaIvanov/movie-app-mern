@@ -1,7 +1,8 @@
 import { GET_MOVIES, GET_MOVIES_ERROR } from '../actions/types';
 
 const initialState = {
-  movies: [],
+  moviesArray: [],
+  page: null,
   loading: true,
   movie: null
 };
@@ -13,13 +14,14 @@ export default function(state = initialState, action) {
     case GET_MOVIES:
       return {
         ...state,
-        movies: payload,
+        moviesArray: [...state.moviesArray, ...payload.results],
+        page: payload.page,
         loading: false
       };
     case GET_MOVIES_ERROR:
       return {
         ...state,
-        movies: null,
+        moviesArray: null,
         loading: false
       };
     default:

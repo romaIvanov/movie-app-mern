@@ -9,9 +9,24 @@ export const getMovies = () => async dispatch => {
     );
     dispatch({
       type: GET_MOVIES,
-      payload: res.data.results
+      payload: res.data
     });
   } catch (err) {
     dispatch({ type: GET_MOVIES_ERROR });
+  }
+};
+
+export const getMoviesPage = page => async dispatch => {
+  try {
+    const res = await axios.get(
+      `${API_URL}/movie/popular?api_key=${API_KEY}&language=en-US&page=${page +
+        1}`
+    );
+    dispatch({
+      type: GET_MOVIES,
+      payload: res.data
+    });
+  } catch (err) {
+    dispatch({ type: GET_MOVIES });
   }
 };
